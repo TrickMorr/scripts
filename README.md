@@ -6,4 +6,4 @@
 
 ## Powershell Scripts
 
-- [SSD Health Check](./ssd-health-check) SSD drives that are without power for long periods of time are at risk of malfunction. This script runs a health check that scans/refreshes the cells of an SSD drive. Recommended to run every 6 months to a year to keep drives healthy.
+- [SSD Health Check](./ssd-health-check) SSDs that are without power for long periods of time are at risk of malfunction. This script runs a health check that scans/refreshes the cells of an SSD. Recommended to run every 6 months to a year to keep drives healthy.
