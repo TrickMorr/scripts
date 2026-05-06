@@ -57,8 +57,3 @@ for line in lines:
         print(comment_start + fitted_line)
     else:
         print("\n")
-                       
-                   
-        
-
-
