@@ -13,17 +13,15 @@ It prints to the terminal for you to highlight, copy, and paste into your code e
 
 ### User-defined parts of script
 
+- the `print_to_terminal' variable, if `True` will print output to your screen for you to simply copy and paste wherever you plan to put it. If `False`, running the script will prompt you for a filename and output to that file created in the current working directory.
 - the `comment_start` variable contains the characters to add to the beginning of each line. Change as you like. Script will handle it.
-- the `test_line` variable contains the line I typed to fill one full line of the default window size in my instance of IDLE. Delete or add characters as you like. It is contained in triple quotes to visually isolate the line across the full window. .strip() is necessary later to remove the 2 invisible newline characters contained in the string. The script subtracts the length of the specified `comment_start` variable so fill the window edge to edge with anything you like.
+- the `test_line` variable contains the line I typed to fill one full line of the default window size in my preferred code editor. Delete or add characters as you like. It is contained in triple quotes to visually isolate the line across the full window. .strip() is necessary later to remove the 2 invisible newline characters contained in the string. The script subtracts the length of the specified `comment_start` variable. The characters used in this variable don't matter as it's just the length that is used.
 
 ### To Use
 
-- edit script as necessary: `comment_start` and `test_line` variables
+- edit script as necessary: `print_to_terminal`, `comment_start` and `test_line` variables
 - run the script using your preferred method.
 - follow the instructions:
-- paste your text
-- press ENTER
-- type `END` all caps no quotes
-- press ENTER
-- the text should be generated to stdout (the terminal)
-- copy the output text to paste into your code editor
+- paste your text, press ENTER, type `END` all caps no quotes, and press ENTER once more
+- the text should be generated to stdout (the terminal) or to a new file
+- copy the output text to paste into your code editor or go open the file
