@@ -16,16 +16,18 @@ The script will count every character in this line and use that number. AAAAAAAA
 
 # line length defined by above line minus the specified comment characters
 line_length = len(test_line.strip()) - len(comment_start)
-print(len(test_line))
-print(len(comment_start))
-print(line_length)
 
 # clear prompt to paste text.
-print("This tool takes pasted text, fits it to a specified line length,\n\
+print("-----Text Fit and Comment Tool-----\n\n\
+This tool takes pasted text, fits it to a specified line length,\n\
 and comments it out, for pasting into your code.\n\n\
 Instructions:\n\
-Paste your text below.\n\
-Press ENTER and then type 'END' (all caps, no quotes) on its own line when done:")
+Paste text\n\
+Press ENTER\n\
+Type `END` (all caps, no quotes) on its own line.\n\
+Press ENTER.\n\
+Commented text will print for you to copy/paste.\n\n\
+Paste text below:\n")
 
 # create list of lines with END defined
 lines = []
