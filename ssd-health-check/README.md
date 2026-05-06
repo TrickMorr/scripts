@@ -1,5 +1,4 @@
-# ssd''_health_check
-
+## SSD Health Check Tool
 
 
 An SSD needs to be powered on and used for maximum health. This PowerShell script is intended for periodic use on drives that you are not using regularly. It will run a health check on the drive, along with a read process of all files, thereby renewing the health of the drive.
