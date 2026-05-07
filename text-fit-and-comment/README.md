@@ -9,7 +9,9 @@ This tool does that work for me.
 It takes a pasted block of text and breaks it into lines of whole words that are less than or equal to a specified length.  
 It then comments out each line of text.  
 It preserves line breaks for legibility.
-It prints to the terminal for you to highlight, copy, and paste into your code editor.
+It prints to the terminal for you to highlight, copy, and paste into your code editor,
+OR it prompts you for a filename and outputs the commented text to a new file in the current working directory. 
+(still a work in progress for how conveniently that works if you run this from any other directory than the one you want things in)
 
 ### User-defined parts of script
 
