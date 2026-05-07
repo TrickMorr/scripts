@@ -1,16 +1,23 @@
 ## Text Fit and Comment Tool
 
 I got into solving Python challenges on pynative.com.  
-I copy and paste python problem descriptions into my python file for clear reference later.   
+I copy and paste the challenge descriptions into my python file for clear reference later.   
 I was manually formatting the text to comfortably fit the default window size, and manually commenting out each line.
 
 This tool does that work for me.
 
 It takes a pasted block of text and breaks it into lines of whole words that are less than or equal to a specified length.  
 It then comments out each line of text.  
-It preserves line breaks for legibility.
-It prints to the terminal for you to highlight, copy, and paste into your code editor,
+It preserves line breaks for legibility.  
+It prints to the terminal for you to highlight, copy, and paste into your code editor...  
 OR it prompts you for a filename and outputs the commented text to a new file in the current working directory. 
+
+It will generate a filename for you to approve or manually rename, using the first line of the pasted text.  
+The logic used is for my use case: the first line of the pynative challenge formatted like:  
+Exercise 69: Name of Challenge (optional part here)  
+output would be: name_of_challenge_optional_part_here.py  
+
+So far it handles all the variations I've seen, but I haven't tested them all.
 
 ### User-defined parts of the script
 
