@@ -24,13 +24,12 @@ line_length = len(test_line.strip()) - len(comment_start)
 
 # clear prompt to paste text.
 print("-----Text Fit and Comment Tool-----\n\n\
-This tool takes pasted text, fits it to a specified line length,\n\
-and comments it out, for pasting into your code.\n\n\
+This tool fits a block of text to specified line lengths\n\
+and adds comment characters to the beginning of each line.\n\
+Output is either to the terminal or a new file.\n\n\
 Instructions:\n\n\
-Paste text\n\n\
-Press ENTER\n\n\
-Type `END` (all caps, no quotes) on its own line.\n\n\
-Press ENTER.\n\n\n\
+Paste text, press ENTER\n\n\
+Type `END` (all caps, no quotes), press ENTER.\n\n\
 Paste text below:\n")
 
 # create list of lines with END defined
@@ -74,16 +73,18 @@ else: # write to file
 # but it does prompt for manually entered filename
 
     line1 = lines[0]
-    remove_beginning = line1.split(": ")[1]
-    filename = (re.sub(r'[ ()]+', '_', remove_beginning).strip("_")).lower() + ".py"
+    first_split = line1.split(" ")
+    remove_beginning = " ".join(first_split[2:])
+    filename = (re.sub(r'[ ()/]+', '_', remove_beginning).strip("_")).lower() + ".py"
 
     confirm = "n"
     while confirm != "y":
-        temp = input(f"\n\nPress ENTER for filename of: {filename}\n\n\
+        temp = input(f"\n\n\n\nPress ENTER for filename of: {filename}\n\n\
 OR Type name of file to be created here: ")
         if temp != "":
             filename = temp
-        confirm = input(f"\n\nFilename will be: {filename}    Confirm Y/N: ").strip().lower()
+        confirm = input(f"\n\nOK! Filename will be:       {filename}\n\n\
+                        Type Y to confirm, N to rename, ctrl+c to cancel: ").strip().lower()
 
     with open(filename, "w") as file:
         file.write(output)
